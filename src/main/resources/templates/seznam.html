@@ -9,35 +9,38 @@
           href="https://maxst.icons8.com/vue-static/landings/line-awesome/line-awesome/1.3.0/css/line-awesome.min.css">
     <link rel="stylesheet" href="/css/style.css">
     <link rel="icon" type="image/png" href="/images/favicon.png">
+
+    DESIGN STRÁNKY JE OŠKLIVÝ, PRACUJI NA TOM, ABY NEBYL :)
+    DESIGN STRÁNKY JE OŠKLIVÝ, PRACUJI NA TOM, ABY NEBYL :)
+    DESIGN STRÁNKY JE OŠKLIVÝ, PRACUJI NA TOM, ABY NEBYL :)
+    ... nesedí mi css (?)
+
 </head>
 <body>
 <a href="/detail">
 
     <div class="vizitka" th:each="vizitka, iterStat : ${vizitkaList}">
         <a href="/templates/detail.html" th:href="@{/detail(id=${iterStat.index})}" class="btn btn/primary">Detail</a>
+        <a th:text="${iterStat.index}"></a>
 
-        <div th:text="${iterStat.index}"></div>
         <div class th:text="${vizitka.jmeno}">jmenoZeSeznamu</div>
         <div class th:text="${vizitka.firma}">firmaZeSeznamu</div>
 
         <div class="udaje">
-
             <div class="adresa">
                 <div th:text="${vizitka.ulice}">uliceZeSeznamu</div>
                 <div th:text="${vizitka.obecPsc}"><span>11000</span> Praha 1</div>
             </div>
 
             <div class="kontakty">
+                <div><i class="las la-at" th:if="${vizitka.email} != null"></i><span th:text="${vizitka.email}">email</span></div>
+                <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i><div>
 
-                <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email</i></div>
-                <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i>
-
-                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null" th:text="${vizitka.telefon}">telefon</i></div>
+                <i class="las la-phone-alt" th:if="${vizitka.telefon} != null"></i> <span th:text="${vizitka.telefon}">telefon</span></div>
                 <i class="las la-phone-alt" th:if="${vizitka.telefon} == null">neuvedeno</i>
 
-                <div><i class="las la-globe" th:if="${vizitka.web} != null" th:text="${vizitka.web}">web</i></div>
+                <div><i class="las la-globe" th:if="${vizitka.web} != null"></i> <span th:text="${vizitka.web}">web</span></div>
                 <i class="las la-globe" th:if="${vizitka.web} == null">neuvedeno</i>
-
             </div>
         </div>
     </div>

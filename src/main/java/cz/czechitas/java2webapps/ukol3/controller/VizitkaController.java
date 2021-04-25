@@ -11,6 +11,7 @@ import java.util.List;
 /**
  * Kontroler obsluhující zobrazování vizitek.
  */
+
 @Controller
 public class VizitkaController {
     private final List<Vizitka> vizitkaList;

@@ -18,6 +18,7 @@ public class Vizitka {
         this.email = email;
         this.telefon = telefon;
         this.web = web;
+
     }
     public String getJmeno() {
         return jmeno;
