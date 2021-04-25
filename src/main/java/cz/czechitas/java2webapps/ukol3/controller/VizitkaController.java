@@ -23,7 +23,6 @@ public class VizitkaController {
                 new Vizitka("Irena Bazantova", "MKZ Litomerice", "Prazska 88", "Litomerice 41201", "fakeEmail@email.cz", "111222333", "www.mkz-ltm.cz"),
                 new Vizitka("Pepa Bazant", "Armada CR", "Jarosova 22", "Litomerice 41201", null, "222333444", "www.acr.cz"),
                 new Vizitka("Fanda Bazant", "SPSS Roosveltova", "Prazska 88", "Litomerice 41201", "fejkEmail@email.cz", null, "www.spss.cz")
-
         );
     }
 
