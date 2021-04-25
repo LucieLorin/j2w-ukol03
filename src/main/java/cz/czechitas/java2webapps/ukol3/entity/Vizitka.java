@@ -54,8 +54,8 @@ public class Vizitka {
 
     // READ-ONLY PROPERTY
     public String CelaAdresa() {
-        return ulice + " " + obecPsc;
-    }
+        return ulice + " " + obecPsc;}
+
     public String getEmail() {
         return email;
     }

@@ -26,12 +26,13 @@
                 <div th:text="${vizitka.ulice}">uliceZeSeznamu</div>
                 <div th:text="${vizitka.obecPsc}"><span>11000</span> Praha 1</div>
             </div>
+
             <div class="kontakty">
+
                 <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email</i></div>
                 <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i>
 
-                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null"
-                        th:text="${vizitka.telefon}">telefon</i></div>
+                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null" th:text="${vizitka.telefon}">telefon</i></div>
                 <i class="las la-phone-alt" th:if="${vizitka.telefon} == null">neuvedeno</i>
 
                 <div><i class="las la-globe" th:if="${vizitka.web} != null" th:text="${vizitka.web}">web</i></div>

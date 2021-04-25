@@ -23,6 +23,7 @@
                 <div th:text="${vizitka.obecPsc}"><span>11000</span> Prah</div>
             </div>
             <div class="kontakty">
+
                 <i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email< </i>
                 <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i>
 

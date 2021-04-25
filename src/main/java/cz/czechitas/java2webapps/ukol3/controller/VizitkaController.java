@@ -15,7 +15,6 @@ import java.util.List;
 public class VizitkaController {
     private final List<Vizitka> vizitkaList;
 
-
     public VizitkaController() {
         vizitkaList = Arrays.asList(
 
