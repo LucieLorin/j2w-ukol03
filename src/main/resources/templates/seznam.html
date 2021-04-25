@@ -26,7 +26,6 @@
                 <div th:text="${vizitka.ulice}">uliceZeSeznamu</div>
                 <div th:text="${vizitka.obecPsc}"><span>11000</span> Praha 1</div>
             </div>
-
             <div class="kontakty">
                 <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email</i></div>
                 <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i>
