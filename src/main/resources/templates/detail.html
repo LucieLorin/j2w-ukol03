@@ -12,26 +12,26 @@
 </head>
 <body>
 <div class="detail">
-    <div class="detail" th:each="vizitka: ${vizitka}">
+    <div class="vizitka" th:each="vizitka: ${vizitka}">
 
-        <div class th:text="${vizitka.jmeno}">jmenoZeSeznamu</div>
-        <div class th:text="${vizitka.firma}">firmaZeSeznamu</div>
+        <div class="jmeno" th:text="${vizitka.jmeno}">jmenoZeSeznamu</div>
+        <div class="firma" th:text="${vizitka.firma}">firmaZeSeznamu</div>
 
         <div class="udaje">
             <div class="adresa">
-                <div th:text="${vizitka.ulice}">uliceZeSeznamu</div>
-                <div th:text="${vizitka.obecPsc}"><span>11000</span> Prah</div>
+                <div class th:text="${vizitka.ulice}">uliceZeSeznamu</div>
+                <div class th:text="${vizitka.obecPsc}"><span>11000</span></div>
             </div>
             <div class="kontakty">
 
-                <i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email< </i>
-                <i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i>
+                <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email< </i></div>
+                <div><i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i></div>
 
-                <i class="las la-phone-alt" th:if="${vizitka.telefon} != null" th:text="${vizitka.telefon}">telefon</i>
-                <i class="las la-phone-alt" th:if="${vizitka.telefon} == null">neuvedeno</i>
+                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null" th:text="${vizitka.telefon}">telefon</i></div>
+                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} == null">neuvedeno</i></div>
 
-                <i class="las la-globe" th:if="${vizitka.web} != null" th:text="${vizitka.web}">web</i>
-                <i class="las la-globe" th:if="${vizitka.web} == null">neuvedeno</i>
+                <div><i class="las la-globe" th:if="${vizitka.web} != null" th:text="${vizitka.web}">web</i></div>
+                <div><i class="las la-globe" th:if="${vizitka.web} == null">neuvedeno</i></div>
 
             </div>
         </div>
@@ -42,7 +42,6 @@
         <iframe style="border:none" th:src="@{https://frame.mapy.cz/(q=${vizitka.CelaAdresa()})}" width="100%"
                 height="100%" frameborder="0"></iframe>
     </div>
-
 </div>
 </body>
 </html>
