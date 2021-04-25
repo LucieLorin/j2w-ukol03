@@ -19,7 +19,6 @@ public class Vizitka {
         this.telefon = telefon;
         this.web = web;
     }
-
     public String getJmeno() {
         return jmeno;
     }
@@ -79,6 +78,5 @@ public class Vizitka {
     public void setWeb(String web) {
         this.web = web;
     }
-
 }
 

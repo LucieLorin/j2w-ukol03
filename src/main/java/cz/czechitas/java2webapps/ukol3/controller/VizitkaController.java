@@ -24,7 +24,6 @@ public class VizitkaController {
                 new Vizitka("Fanda Bazant", "SPSS Roosveltova", "Prazska 88", "Litomerice 41201", "fejkEmail@email.cz", null, "www.spss.cz")
         );
     }
-
     @GetMapping("/")
     public ModelAndView seznam() {
         ModelAndView modelAndView = new ModelAndView("seznam");
