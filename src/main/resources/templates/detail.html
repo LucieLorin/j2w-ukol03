@@ -11,8 +11,8 @@
     <link rel="icon" type="image/png" href="/images/favicon.png">
 </head>
 <body>
-<div class="detail">
-    <div class="vizitka" th:each="vizitka: ${vizitka}">
+<div class="/detail">
+    <div class="vizitka">
 
         <div class="jmeno" th:text="${vizitka.jmeno}">jmenoZeSeznamu</div>
         <div class="firma" th:text="${vizitka.firma}">firmaZeSeznamu</div>
@@ -24,10 +24,13 @@
             </div>
             <div class="kontakty">
 
-                <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email< </i></div>
+                <div><i class="las la-at" th:if="${vizitka.email} != null" th:text="${vizitka.email}">email< </i>
+                </div>
                 <div><i class="las la-at" th:if="${vizitka.email} == null">neuvedeno </i></div>
 
-                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null" th:text="${vizitka.telefon}">telefon</i></div>
+                <div><i class="las la-phone-alt" th:if="${vizitka.telefon} != null"
+                        th:text="${vizitka.telefon}">telefon</i>
+                </div>
                 <div><i class="las la-phone-alt" th:if="${vizitka.telefon} == null">neuvedeno</i></div>
 
                 <div><i class="las la-globe" th:if="${vizitka.web} != null" th:text="${vizitka.web}">web</i></div>
@@ -42,6 +45,6 @@
         <iframe style="border:none" th:src="@{https://frame.mapy.cz/(q=${vizitka.CelaAdresa()})}" width="100%"
                 height="100%" frameborder="0"></iframe>
     </div>
-</div>
+ </div>
 </body>
 </html>

@@ -12,11 +12,10 @@
 
 </head>
 <body>
-<a href="/detail">
+<div class="seznam">
+<a href="/detail" th:each="vizitka, iterStat : ${vizitkaList}" th:href="@{/detail(id=${iterStat.index})}">
 
-    <div class="vizitka" th:each="vizitka, iterStat : ${vizitkaList}">
-        <a href="/templates/detail.html" th:href="@{/detail(id=${iterStat.index})}" class="btn btn/primary">Detail</a>
-        <a th:text="${iterStat.index}"></a>
+    <div class="vizitka">
 
         <div class="jmeno" th:text="${vizitka.jmeno}">jmenoZeSeznamu</div>
         <div class="firma" th:text="${vizitka.firma}">firmaZeSeznamu</div>
@@ -40,9 +39,11 @@
                 <div><i class="las la-globe" th:if="${vizitka.web} != null"></i> <span
                         th:text="${vizitka.web}">web</span></div>
                 <i class="las la-globe" th:if="${vizitka.web} == null">neuvedeno</i>
-            </div>
+
+        </div>
         </div>
     </div>
 </a>
+</div>
 </body>
 </html>
